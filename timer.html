@@ -7,33 +7,33 @@
 <script type="text/javascript">
 var seconds_left = 480;
 var total = seconds_left;
-var timer = false;
+var timerRunning = false;
 
 // variables for time units
 var minutes, seconds, interval;
 var counter = 0;
 
 $(document).ready(function() {
-  $('#countdown').css("font-size",$(window).width()*.18);
+  $('#countdown').css("font-size",$(window).width()*.15);
 });
 
 $(window).resize(function() {
-  $('#countdown').css("font-size",$(window).width()*.18);
+  $('#countdown').css("font-size",$(window).width()*.15);
 });
 
 $(window).click(function() {
-  if (timer == true) {
+  if (timerRunning) {
     //timer, seconds_left = pausetimer(timer);
     clearInterval(interval);
-    timer = false;
+    timerRunning = false;
   }
   else {
-    timer = true;
+    timerRunning = true;
     //starttimer(timer, seconds_left, total, counter);
     interval = setInterval(function () {
       if (seconds_left == 0 && counter == 1) {
         clearInterval();
-        timer = false;
+        timerRunning = false;
       }
       else {
         if (seconds_left == 0 && counter == 0) {
@@ -69,6 +69,7 @@ $(window).click(function() {
   }
 });
 </script>
+
 <style>
 body {
   font-family: 'Open Sans', sans-serif;

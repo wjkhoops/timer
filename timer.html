@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>IOP Countdown Timer</title>
+<title>Countdown Timer</title>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -73,17 +73,29 @@ $(window).click(function() {
 <style>
 body {
   font-family: 'Open Sans', sans-serif;
-  cursor: pointer;
+
 }
 #countdown {
+  cursor: pointer;
   text-align: center;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
+
+.textbox {
+  cursor: auto;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-bottom: 50px;
+}
 </style>
 </head>
 <body>
-<div id="countdown">Click to begin</div>
+
+  <div id='countdown'>Click to begin</div>
+  <div class='textbox'>Enter time: <input type='text' name='time' value='lol'></div>
 </body>
 </html>
